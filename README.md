@@ -10,11 +10,18 @@ public class BTsize {
     }
         public int GetSize(Node root)
         {
-            if(root==null)
+            
+             if(root==null)
             {
                 return 0;
             }
-            return GetSize(root.next)+1;
+            int c=0;
+            while(root!=null)
+            {
+                c++;
+                root=root.next;
+            }
+            return c;
         }
     
     public static void main(String[] args)
